@@ -38,7 +38,7 @@ articleColorPicker.addEventListener('input', (e) =>{
 
 
 fontSelect.addEventListener('change', (e) => {
-
+    
 });
 
 
