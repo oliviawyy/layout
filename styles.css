@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #4285f4;
+    --text-color: #333;
+    --bt-color: #fff;
+    --font-family: 'Roboto', sans-serif:
+
+}
+
+/* estilos base */
+.page{
+    font-family: var(--font-family);
+    color: rgb(8, 10, 10);
+}
+
+/* header styles */
+
+
+
+
+/* dark mode styles */
+/* qnd o body estiver com a classe .dark */
+body.dark{
+    --text-color: #f1f1f1;
+    --bg-color: #121212;
+}
+
+
