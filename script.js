@@ -21,14 +21,16 @@ const loadPreferences = () => {
 
     // cor dos artigos
     const savedArticleColor = localStorage.getItem('articleColor');
-    if (savedArticleColor) {
-
+    if(savedArticleColor) {
+        document.documentElement.style.setProperty('--article-color', savedArticleColor);
+        articleColorPicker.value = savedArticleColor;
     }
 
     // fonte
     const savedFont = localStorage.getItem('fontFamily');
     if (savedFont) {
-        
+         document.documentElement.style.setProperty('--font-family', savedFont);
+        fontSelect.value = savedFont;
     }
 
 
