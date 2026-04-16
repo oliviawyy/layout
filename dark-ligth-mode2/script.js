@@ -1,5 +1,8 @@
+
+
 // Evento que é disparado quando o conteúdo do DOM (estrutura HTML) é totalmente carregado
 window.addEventListener('load', () => {
+
   // Verifica no localStorage se existe um tema salvo. Se não houver, define o tema padrão como 'light'
     let SalvarTema = localStorage.getItem('tema');
     if (!SalvarTema){
