@@ -1,9 +1,10 @@
 // Evento que é disparado quando o conteúdo do DOM (estrutura HTML) é totalmente carregado
-
-
-
+window.addEventListener('load', () => {
   // Verifica no localStorage se existe um tema salvo. Se não houver, define o tema padrão como 'light'
- 
+    let SalvarTema = localStorage.getItem('tema');
+    if (!SalvarTema){
+    SalvarTema = 'light';
+    }
 
   // Adiciona a classe correspondente ao tema (light ou dark) no corpo da página (body)
 
@@ -19,6 +20,8 @@
    
 
     // Adiciona a nova classe de tema ao body
-   
+    
 
     // Armazena o novo tema no localStorage para que a preferência do usuário seja mantida
+    localStorage.setItem('tema', SalvarTema);
+    });
