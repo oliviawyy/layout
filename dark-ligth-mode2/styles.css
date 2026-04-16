@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --primary-color-light: #f0f0f0;
+    --secondary-color-light: #ffffff;
+    --text-color-light: #333;
+    --hover-color-light: #ddd;
+    --button-bg-light: #e0e0e0;
+    --sidebar-bg-light: #ffffff;
+
+    --primary-color-dark: #1e1e1e;
+    --secondary-color-dark: #2e2e2e;
+    --text-color-dark: #f0f0f0;
+    --hover-color-dark: #444;
+    --button-bg-dark: #333;
+    --sidebar-bg-dark: #2e2e2e;
+}
+
+
+.theme-container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.theme-container.light {
+    color: var(--text-color-light);
+    background-color: var(--primary-color-light);
+}
+
+.theme-container.dark {
+    color: var(--text-color-dark);
+    background-color: var(--primary-color-dark);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: var(--sidebar-bg-light);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.theme-container.dark .sidebar {
+    background-color: var(--sidebar-bg-dark);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar ul {
+    padding-top: 20px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: inherit; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--hover-color-light);
+}
+
+.theme-container.dark .sidebar ul li a:hover {
+    background-color: var(--hover-color-dark);
+}
+
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.content h1 {
+    margin-bottom: 10px;
+}
+
+/* Botão */
+.theme-toggle-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    background-color: var(--button-bg-light);
+    color: var(--text-color-light);
+    transition: 0.3s;
+}
+
+.theme-container.dark .theme-toggle-button {
+    background-color: var(--button-bg-dark);
+    color: var(--text-color-dark);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.theme-toggle-button:hover {
+    filter: brightness(0.9);
+}
