@@ -10,12 +10,15 @@ window.addEventListener('load', () => {
     }
 
   // Adiciona a classe correspondente ao tema (light ou dark) no corpo da página (body)
-
+    
 
   // Seleciona o botão de alternar tema usando o ID 'toggle-theme' e adiciona um evento de clique
-  
+  const toggleTheme = document.querySelector('#toggle-theme')
+    toggleTheme.addEventListener('click', () => {
+
     
     // Verifica qual tema está atualmente aplicado no body (light ou dark)
+    
     // Se o tema for 'light', muda para 'dark', caso contrário, muda para 'light'
     
 
@@ -27,4 +30,6 @@ window.addEventListener('load', () => {
 
     // Armazena o novo tema no localStorage para que a preferência do usuário seja mantida
     localStorage.setItem('tema', SalvarTema);
+  
+  })
     });
