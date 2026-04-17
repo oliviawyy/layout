@@ -44,11 +44,15 @@ const loadPreferences = () => {
 
 
 colorPicker.addEventListener('input', (e) => {
-    const color = e.target.value; // capturar o movimento do mouse
-    //mudar o valor da variavel no css, com o valor capturado
+    console.log(colorPicker)
+    const color = e.target.value; 
+        newsArticles.forEach(article => {
+        article.style.color = color;
+    });
     document.documentElement.style.setProperty('--primary-color', color);
     // inserir a chave (primaryColor) e o valor (color) no local storage
     localStorage.setItem('primaryColor', color);
+   
 });
 
 
