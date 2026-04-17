@@ -44,7 +44,7 @@ const loadPreferences = () => {
 
 
 colorPicker.addEventListener('input', (e) => {
-    console.log(colorPicker)
+    console.log(e.target.value)
     const color = e.target.value; 
         newsArticles.forEach(article => {
         article.style.color = color;
